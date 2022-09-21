@@ -1,139 +1,176 @@
-# W3F Grant Proposal
+# W3F Grant Proposal# Name of your Project
 
-- **Project Name:** Rubeus Keeper
-- **Team Name:** Bela Supernova
-- **Payment Address:** 0xC0d28794eA40Ce9b9F4B62a1B2Bb42FD34b7d305 (USDT)
-- **[Level](https://github.com/w3f/Grants-Program/tree/master#level_slider-levels):** 2
+> This document will be part of the terms and conditions of your agreement and therefore needs to contain all the required information about the project. Don't remove any of the mandatory parts presented in bold letters or as headlines (except for the title)! Lines starting with a `>` (such as this one) should be removed. Please use markdown instead of HTML (e.g. `![](image.png)` instead of `<img>`). 
+>
+> See the [Grants Program Process](https://github.com/w3f/Grants-Program/#pencil-process) on how to submit a proposal.
+
+- **Team Name:** Legal name of your team (e.g. Duo)
+- **Payment Address:** BTC, Ethereum (USDT/USDC/DAI) or Polkadot/Kusama (aUSD) payment address. Please also specify the currency. (e.g. 0x8920... (DAI))
+- **[Level](https://github.com/w3f/Grants-Program/tree/master#level_slider-levels):** 1, 2 or 3
+
+> ⚠️ *The combination of your GitHub account submitting the application and the payment address above will be your unique identifier during the program. Please keep them safe.*
 
 ## Project Overview :page_facing_up:
-This application is not in response to an RFP, but it fully complies with a potentially interesting project “Sign-in with your Polkadot, Kusama, etc. account” mentioned in [Open Source Polkadot Stack](https://wiki.polkadot.network/docs/build-open-source) page in the “ browser extensions” section.
+
+If this application is in response to an RFP, please indicate this on the first line of this section.
+
+If this is an application for a follow-up grant (the continuation of an earlier, successful W3F grant), please provide name and/or pull request of said grant on the first line of this section.
 
 ### Overview
 
-Remembering passwords from all resources is a challenging task. It doesn’t need any introduction as all Internet users use passwords dozen times a day. The most common, but less reliable way of password managing is using the only password for all resources – not a good idea, but true. The other one, next most popular – using password managers built in your browser. Quite reliable for low critical data, but for privacy critical data this is not the way to store passwords as there are several ways for third parties to obtain passwords from these centralized systems. Users that value privacy usually use offline desktop applications for managing passwords – it’s safe, but has disadvantages as different devices won’t sync, so one has to manage them separately.
+Please provide the following:
 
-The aim of this project is to develop a decentralized password manager that stores data in a blockchain and uses personal Polkadot wallet credentials to access the passwords manager dApp. Saved passwords will be added automatically to appropriate forms on websites after logging in with user’s wallet private key in the browser extension.
+- If the name of your project is not descriptive, a tag line (one sentence summary).
+- A brief description of your project.
+- An indication of how your project relates to / integrates into Substrate / Polkadot / Kusama.
+- An indication of why your team is interested in creating this project.
 
 ### Project Details
 
-The Rubeus Keeper dApp will consist of two functional modules:
-1.	An Ink! smart contract for seсure password storage using a Polkadot or Kusama account. Just log in to your Polkadot wallet and get access to your passwords DB. The smart contract will includes methods for writing and getting passwords, as well as categorizing.
-2.	A browser extension for password managing: registration, log in, password generation, categorizing, saving, retrieving, autocomplete functionality.
+We expect the teams to already have a solid idea about your project's expected final state. Therefore, we ask the teams to submit (where relevant):
 
-Under this MVP we consider security in the next attack vectors:
- 1. Transferred data unauthorized interception and decryption (categories, URLs/logins, passwords).
- 2. Malicious data substitution by a node.
-To solve the above mentioned tasks the data will be encrypted using the ChaCha20-Poly1305 streaming algorithm with message authentication. The protocol is standardized by IETF in RFC 7539, in software implementations it is much more efficient and faster than AES.
+- Mockups/designs of any UI components
+- Data models / API specifications of the core functionality
+- An overview of the technology stack to be used
+- Documentation of core components, protocols, architecture, etc. to be deployed
+- PoC/MVP or other relevant prior work or research on the topic
+- What your project is _not_ or will _not_ provide or implement
+  - This is a place for you to manage expectations and to clarify any limitations that might not be obvious
 
-![Rubeus schema 3](https://user-images.githubusercontent.com/98888366/184879468-bb14b061-7e32-4f89-bc15-8d753d66f236.png)
+Things that shouldn’t be part of the application (see also our [FAQ](../docs/faq.md)):
+- The (future) tokenomics of your project 
+- For non-infrastructure projects—deployment and hosting costs, maintenance or audits
+- Business-oriented activities (marketing, business planning), events or outreach
 
 ### Ecosystem Fit
 
-The Rubeus Keeper dApp will be used by all the community and even all Internet users as it simplifies and secures daily interaction with web applications – web2 or web3 – our dApp will be comprehensively useful. The target audience is “a web user”.
+Help us locate your project in the Polkadot/Substrate/Kusama landscape and what problems it tries to solve by answering each of these questions:
 
-In the [Open Source Polkadot Stack](https://wiki.polkadot.network/docs/build-open-source) we see the [Logion network]( https://github.com/logion-network/logion-node) project, that represents a separate parachain with very wide functionality. Unlike Logion we offer a simple Ink! contract and an extension that can be used in any Substrate based parachain with no need for setting nodes and etc. Fast, easy and no need for a separate wallet.
+- Where and how does your project fit into the ecosystem?
+- Who is your target audience (parachain/dapp/wallet/UI developers, designers, your own user base, some dapp's userbase, yourself)?
+- What need(s) does your project meet?
+- Are there any other projects similar to yours in the Substrate / Polkadot / Kusama ecosystem?
+  - If so, how is your project different?
+  - If not, are there similar projects in related ecosystems?
 
 ## Team :busts_in_silhouette:
 
 ### Team members
 
-- Sergey Cymbal, MBA, CEO at Bela Supernova d.o.o
-- Dmitrii Putilov, Blockchain Department Director at Bela Supernova d.o.o
-- Ilia Shavrin, Full stack software developer at Bela Supernova d.o.o
-- Anton Shramko, Full stack software developer at Bela Supernova d.o.o
-- Ksenia Baranova, QA Lead at Bela Supernova d.o.o
-- Alexey Vexin, Project Manager at Bela Supernova d.o.o
-- Anton Borisov, DevOps Engineer at Bela Supernova d.o.o
+- Name of team leader
+- Names of team members
 
 ### Contact
 
-- **Contact Name:** Alexey Vexin
-- **Contact Email:** av@bsn.si
-- **Website:** https://www.bsn.si
+- **Contact Name:** Full name of the contact person in your team
+- **Contact Email:** Contact email (e.g. john@duo.com)
+- **Website:**
 
 ### Legal Structure
 
-- **Registered Address:** Cesta v Mestni log 55, Ljubljana 1000, Slovenia
-- **Registered Legal Entity:** BELA SUPERNOVA, sistemske rešitve d.o.o.
+- **Registered Address:** Address of your registered legal entity, if available. Please keep it in a single line. (e.g. High Street 1, London LK1 234, UK)
+- **Registered Legal Entity:** Name of your registered legal entity, if available. (e.g. Duo Ltd.)
 
 ### Team's experience
 
-Sergey Cymbal is an experienced executive, leader and visioner responsible for the most disruptive innovations initiatives across Oil/Gas, Utilities, and Telcos. Ex-member of winter Olympics HQ, responsible for digitalization, Smart grid evangelist. Blockchain early follower, participates in several crypto initiatives.
+Please describe the team's relevant experience. If your project involves development work, we would appreciate it if you singled out a few interesting projects or contributions made by team members in the past. For research-related grants, references to past publications and projects in a related domain are helpful.
 
-Dmitrii Putilov has over 17 years of experience leading the teams creating and maintaining high availability sites. His portfolio contains creation of the robee.io investment platform included in top500 in coinmarketcap.
-
-Ilia Shavrin is a solution architect and full stack software developer with over 12 years of experience in high load enterprise applications. His most recent focus is on blockchain and creation of decentralized applications.
-
-Anton Shramko is an experienced developer with 7 years of experience on various positions, including solution architect in Krypton. Anton active contributor to open source and blockchain communities, he is also a frequent speaker in DevCon conferences. 
-
-Ksenia Baranova is an QA test engineer with over 5 years of experience. Ksenia has exceptional knowledge and skills in the field. She is highly referred within this team, as well as by her former teams.
-
-Alexey Vexin is a product owner and a project manager with 15+ years of experience in managing complicated telecoms and IT projects in Telco, Utilities and Governmental sectors with deep focus on business process management. Led a dozen of national scaled projects for IT systems implementation and industry scaled technology development, standardization and implementation.
-
-Anton Borisov is a DevOps Engineer with broad experience. For over 15 years Anton was supporting, administering, and maintaining secure networks, servers, and clusters. He also has versatile experience with CI/CD, IT Infrastructure Monitoring, and Kubernetes on-premise and in Cloud. One of the most recent projects Anton participated in was building a first on chain casino.
-
-Bela Supernova has delivered a W3f grant earlier: [OCEX](https://github.com/w3f/Grants-Program/pull/803#issuecomment-1064184965)
-
-BSN also has 2 active projects under FileCoin, Chainlink and Tgrade grants.
+If anyone on your team has applied for a grant at the Web3 Foundation previously, please list the name of the project and legal entity here.
 
 ### Team Code Repos
 
-- https://github.com/orgs/bsn-si/repositories
-- https://github.com/ManageIQ/manageiq-providers-amazon/commits?author=aiperon
-- https://github.com/ManageIQ/manageiq/commits/?author=aiperon
-- https://github.com/friktor?tab=repositories
-- https://github.com/dsputilov
-- https://github.com/friktor
-- https://github.com/aiperon
+- https://github.com/<your_organisation>
+- https://github.com/<your_organisation>/<project_1>
+- https://github.com/<your_organisation>/<project_2>
+
+Please also provide the GitHub accounts of all team members. If they contain no activity, references to projects hosted elsewhere or live are also fine.
+
+- https://github.com/<team_member_1>
+- https://github.com/<team_member_2>
 
 ### Team LinkedIn Profiles (if available)
 
-- [Sergey Cymbal] (https://www.linkedin.com/in/sergecymbal/)
-- [Dmitrii Putilov] (https://www.linkedin.com/in/dmitri-p-96b0a140/)
-- [Ilia Shavrin] (https://www.linkedin.com/in/ilia-shavrin-716552228/)
-- [Anton Shramko] (https://www.linkedin.com/in/anton-shramko-25971b162/)
-- [Ksenia Baranova] (https://www.linkedin.com/in/mayawotson/)
-- [Alexey Vexin] (https://www.linkedin.com/in/alexey-vexin-800a4068/)
-- [Anton Borisov]
+- https://www.linkedin.com/<person_1>
+- https://www.linkedin.com/<person_2>
+
+## Development Status :open_book:
+
+If you've already started implementing your project or it is part of a larger repository, please provide a link and a description of the code here. In any case, please provide some documentation on the research and other work you have conducted before applying. This could be:
+
+- links to improvement proposals or [RFPs](https://github.com/w3f/Grants-Program/tree/master/rfp-proposal) (requests for proposal),
+- academic publications relevant to the problem,
+- links to your research diary, blog posts, articles, forum discussions or open GitHub issues,
+- references to conversations you might have had related to this project with anyone from the Web3 Foundation,
+- previous interface iterations, such as mock-ups and wireframes.
 
 ## Development Roadmap :nut_and_bolt:
 
-We plan to execute 2 deliverables in two milestones:
-- an Ink! smart contract for password storage;
-- a browser extension for password management (tested under Chrome browser).
+This section should break the development roadmap down into milestones and deliverables. To assist you in defining it, we have created a document with examples for some grant categories [here](../docs/grant_guidelines_per_category.md). Since these will be part of the agreement, it helps to describe _the functionality we should expect in as much detail as possible_, plus how we can verify and test that functionality. Whenever milestones are delivered, we refer to this document to ensure that everything has been delivered as expected.
 
-The project will be supported by a team of 2 developers, 1 UI/UX designer, 1 DevOps engineer and 1 QA.
+Below we provide an **example roadmap**. In the descriptions, it should be clear how your project is related to Substrate, Kusama or Polkadot. We _recommend_ that teams structure their roadmap as 1 milestone ≈ 1 month.
+
+For each milestone,
+
+- make sure to include a specification of your software. _Treat it as a contract_; the level of detail must be enough to later verify that the software meets the specification.
+- include the amount of funding requested _per milestone_.
+- include documentation (tutorials, API specifications, architecture diagrams, whatever is appropriate) in each milestone. This ensures that the code can be widely used by the community.
+- provide a test suite, comprising unit and integration tests, along with a guide on how to set up and run them.
+- commit to providing Dockerfiles for the delivery of your project.
+- indicate milestone duration as well as number of full-time employees working on each milestone.
+- **Deliverables 0a-0d are mandatory for all milestones**, and deliverable 0e at least for the last one. If you do not intend to deliver one of these, please state a reason in its specification (e.g. Milestone X is research oriented and as such there is no code to test).
+
+> :zap: If any of your deliverables is based on somebody else's work, make sure you work and publish _under the terms of the license_ of the respective project and that you **highlight this fact in your milestone documentation** and in the source code if applicable! **Teams that submit others' work without attributing it will be immediately terminated.**
 
 ### Overview
 
-- **Total Estimated Duration:** 2,5 months
-- **Full-Time Equivalent (FTE):**  3 FTE
-- **Total Costs:** 30,000 USDT
+- **Total Estimated Duration:** Duration of the whole project (e.g. 2 months)
+- **Full-Time Equivalent (FTE):**  Average number of full-time employees working on the project throughout its duration (see [Wikipedia](https://en.wikipedia.org/wiki/Full-time_equivalent), e.g. 2 FTE)
+- **Total Costs:** Requested amount in USD for the whole project (e.g. 12,000 USD). Note that the acceptance criteria and additional benefits vary depending on the [level](../README.md#level_slider-levels) of funding requested. This and the costs for each milestone need to be provided in USD; if the grant is paid out in Bitcoin, the amount will be calculated according to the exchange rate at the time of payment.
 
-### Milestone 1 — Design and development of a smart-contract and a testing page
+### Milestone 1 Example — Basic functionality
 
-- **Estimated Duration:** 1,5 months
-- **FTE:**  2 FTE
-- **Costs:** 22,000 USDT
+- **Estimated duration:** 1 month
+- **FTE:**  1,5
+- **Costs:** 8,000 USD
 
 | Number | Deliverable | Specification |
 | -----: | ----------- | ------------- |
-| 0a. | License | Apache 2.0 |
-| 0b. | Documentation | We will provide both **inline documentation** of the code and a basic **tutorial** that explains how a user can run our smart contract and send test transactions, which will show how the functionality works. |
-| 0c. | Testing Guide | Core functions will be fully covered by unit tests to ensure functionality and robustness. In the guide, we will describe how to run these tests. |
-| 1. | Ink! smart-contract | An Ink! smart-contract for password storage and use: “add password (title, url, username, password, comment)”, “delete password”, “get password”, “add category”, “delete category”, “get categories”. Stored data will be encrypted using the ChaCha20-Poly1305 streaming algorithm with message authentication. |  
-| 2. | Test page | A test page for running functional tests: categories (get data from a blockchain, decrypt received data, unzip and get passwords, categories list render, passwords list render by categories); save password (data entry form, data serialization, zip data, data encryption, send transaction); show balance. The test page will be developed using JavaScript. |  
+| 0a. | License | Apache 2.0 / GPLv3 / MIT / Unlicense |
+| 0b. | Documentation | We will provide both **inline documentation** of the code and a basic **tutorial** that explains how a user can (for example) spin up one of our Substrate nodes and send test transactions, which will show how the new functionality works. |
+| 0c. | Testing and Testing Guide | Core functions will be fully covered by comprehensive unit tests to ensure functionality and robustness. In the guide, we will describe how to run these tests. |
+| 0d. | Docker | We will provide a Dockerfile(s) that can be used to test all the functionality delivered with this milestone. |
+| 0e. | Article | We will publish an **article**/workshop that explains [...] (what was done/achieved as part of the grant). (Content, language and medium should reflect your target audience described above.) |
+| 1. | Substrate module: X | We will create a Substrate module that will... (Please list the functionality that will be implemented for the first milestone. You can refer to details provided in previous sections.) |
+| 2. | Substrate module: Y | The Y Substrate module will... |
+| 3. | Substrate module: Z | The Z Substrate module will... |
+| 4. | Substrate chain | Modules X, Y & Z of our custom chain will interact in such a way... (Please describe the deliverable here as detailed as possible) |
+| 5. | Library: ABC | We will deliver a JS library that will implement the functionality described under "ABC Library" |
+| 6. | Smart contracts: ... | We will deliver a set of ink! smart contracts that will...
 
-### Milestone 2 — Design and development of a browser extension
+
+### Milestone 2 Example — Additional features
 
 - **Estimated Duration:** 1 month
-- **FTE:**  1 FTE
-- **Costs:** 8,000 USDT
+- **FTE:**  1,5
+- **Costs:** 8,000 USD
 
-| Number | Deliverable | Specification |
-| -----: | ----------- | ------------- |
-| 0a. | License | Apache 2.0 |
-| 0b. | Documentation | We will provide both **inline documentation** of the code and a basic **tutorial** that explains how a user can run our smart contract and send test transactions, which will show how the functionality works. |
-| 0c. | Testing Guide | Core functions will be fully covered by unit tests to ensure functionality and robustness under the Chrome browser. In the guide, we will describe how to run these tests. |
-| 0d. | Article | We will publish an **article** that explains what was achieved, how to use the new Dapp and what are the benefits of using the system |  
-| 1. | Browser extension | A Chrome browser extension MVP for password management: a registration page (login with a Polkadot wallet private key and set a master-password); login page (using master-password); categories (get data from a blockchain, decrypt received data, unzip and get passwords, categories list render, passwords list render by categories); save password (data entry form, data serialization, zip data, data encryption, send transaction); password generation window, show balance. The extension will be developed using JavaScript. |  
+...
+
+
+## Future Plans
+
+Please include here
+
+- how you intend to use, enhance, promote and support your project in the short term, and
+- the team's long-term plans and intentions in relation to it.
+
+
+## Additional Information :heavy_plus_sign:
+
+**How did you hear about the Grants Program?** Web3 Foundation Website / Medium / Twitter / Element / Announcement by another team / personal recommendation / etc.
+
+Here you can also add any additional information that you think is relevant to this application but isn't part of it already, such as:
+
+- Work you have already done.
+- If there are any other teams who have already contributed (financially) to the project.
+- Previous grants you may have applied for.
